@@ -1,0 +1,143 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/margain8">
+
+            <LinearLayout
+                android:id="@+id/remen_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最近选择"
+                        android:textColor="@color/textcolor" />
+
+                </FrameLayout>
+
+                <android.support.v7.widget.GridLayout
+                    android:id="@+id/gl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    app:columnCount="3"
+                    app:orientation="horizontal" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margain16"
+                android:text="选择城市"
+                android:textColor="@color/textcolor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/itemheight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sheng_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="选择省份"
+                        android:textColor="@color/textcolor" />
+
+                    <TextView
+                        android:id="@+id/shi_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="选择城市"
+                        android:textColor="@color/textcolor" />
+
+                    <TextView
+                        android:id="@+id/qu_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="选择区/县/镇"
+                        android:textColor="@color/textcolor" />
+                </LinearLayout>
+
+                <include layout="@layout/line_huise" />
+
+                <android.support.v7.widget.GridLayout
+                    android:id="@+id/gl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    app:columnCount="3"
+                    app:orientation="horizontal" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/qingkong"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn"
+            android:layout_weight="1"
+            android:background="#c9c9c9"
+            android:gravity="center"
+            android:text="清空"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sure_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/btn"
+            android:layout_weight="1"
+            android:background="#f00"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+

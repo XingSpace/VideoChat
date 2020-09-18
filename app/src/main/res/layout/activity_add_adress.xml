@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F6"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="33dp"
+            android:text="收货人"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/shouhuoren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="输入收货人的姓名"
+            android:inputType="text"
+            android:text=""
+            android:textColor="#333333"
+            android:textColorHint="#AAB2CA"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EAEAEA" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="33dp"
+            android:text="手机号"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/shoujihao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="输入手机号"
+            android:inputType="phone"
+            android:text=""
+            android:maxLength="11"
+            android:textColor="#333333"
+            android:textColorHint="#AAB2CA"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="33dp"
+            android:text="所在地"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/btn_Options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="选择城市"
+            android:textColor="#AAB2CA"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/right_g" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EAEAEA" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="详细地址"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+
+        <EditText
+            android:id="@+id/detail_address"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="街道 楼牌号等"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
+            android:maxLines="3"
+            android:paddingRight="20dp"
+            android:singleLine="false"
+            android:text=""
+            android:textColor="#333333"
+            android:textColorHint="#AAB2CA"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:paddingBottom="14dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="13dp">
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:text="   设为默认地址"
+            android:textColor="@color/hint_color"
+            android:textSize="17sp"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/radiobutton2" />
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/color4"
+        android:gravity="center"
+        android:text="保存并使用"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+</LinearLayout>

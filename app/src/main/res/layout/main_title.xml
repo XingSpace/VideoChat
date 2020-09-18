@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:gravity="bottom|center_horizontal"
+        android:textSize="17sp"
+        />
+
+
+    <ImageView
+        android:id="@+id/base_left_icon"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="35dp"
+        android:visibility="gone"
+        android:padding="@dimen/margain8"
+        android:scaleType="center"
+        android:src="@mipmap/left_btn" />
+
+
+    <TextView
+        android:id="@+id/baseRightTv"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:textColor="@color/white"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:paddingRight="15dp"
+        android:paddingLeft="20dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:gravity="bottom|right"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/baseRightImageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:paddingRight="15dp"
+        android:paddingLeft="20dp"
+        android:drawablePadding="5dp"
+        android:layout_marginTop="42dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        />
+    <ImageView
+        android:id="@+id/base_right_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="38dp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@id/mainTitle"
+        android:padding="5dp"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/address_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:drawablePadding="5dp"
+            android:visibility="visible"
+            android:text="上海"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/search_left_img"
+            android:src="@drawable/back_arrow"
+            android:gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"/>
+
+        <EditText
+            android:id="@+id/search_edit"
+            android:textColorHint="#FFA2A2A2"
+            android:textColor="#ff000000"
+            android:hint="搜索场所活动攻略"
+            android:drawableLeft="@drawable/rc_search_icon"
+            android:layout_marginLeft="5dp"
+            android:drawablePadding="5dp"
+            android:paddingLeft="9dp"
+            android:background="@drawable/grey_yuanjiao"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

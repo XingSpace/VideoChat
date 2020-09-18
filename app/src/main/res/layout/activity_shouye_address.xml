@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/city_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.5dp"
+        android:layout_marginTop="7dp"
+        android:text="城市选择"
+        android:textColor="#ffF8399A"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/smart_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.5dp"
+        android:layout_marginTop="7dp"
+        android:text="智能排序"
+        android:textColor="#ff000000"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dangqianchengshi_tab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="13dp"
+        android:background="@color/gray"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="16dp"
+        android:text="当前城市"
+        android:textColor="#ff666666"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/smart_text" />
+
+    <TextView
+        android:id="@+id/dingwei_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="16dp"
+        android:text="定位失败,点击重新定位"
+        android:textColor="#ff000000"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/dangqianchengshi_tab" />
+
+    <TextView
+        android:id="@+id/lishi_tab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/gray"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="16dp"
+        android:text="历史城市"
+        android:textColor="#ff666666"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/dingwei_text" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lishi_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/lishi_tab" />
+
+    <TextView
+        android:id="@+id/remen_tab"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/gray"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="16dp"
+        android:text="热门城市"
+        android:textColor="#ff666666"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/lishi_recycler" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/remen_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/remen_tab" />
+
+
+</android.support.constraint.ConstraintLayout>

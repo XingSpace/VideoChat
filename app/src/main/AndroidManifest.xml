@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tencent.qcloud.xiaoshipin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- IMSDK 权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- Bugly -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <application
+        android:name="com.tencent.qcloud.xiaoshipin.TCApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/BaseWhiteTransparentTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.mainui.TCSplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".play.TCVideoPreviewActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.tencent.liteav.demo.videopreview" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.yiw.circledemo.activity.ImagePagerActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Black.NoTitleBar"></activity>
+
+
+        <!-- 消息收发service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <!-- 消息收发辅助service -->
+        <service
+            android:name="com.tencent.qalsdk.service.QalAssistService"
+            android:exported="false"
+            android:process=":QALSERVICE" />
+        <!-- 离线消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.QALBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.tencent.qalsdk.broadcast.qal" />
+            </intent-filter>
+        </receiver>
+        <!-- 系统消息广播接收器 -->
+        <receiver
+            android:name="com.tencent.qalsdk.core.NetConnInfoCenter"
+            android:process=":QALSERVICE">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.login.TCLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginTheme" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.login.TCRegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/RegisterTheme" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.mainui.TCMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.leichui.shortviedeo"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.play.TCVodPlayerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videorecord.TCVideoRecordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/RecordActivityTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videorecord.TCVideoFollowRecordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MixRecordActivityTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videorecord.TCVideoTripleScreenActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/MixRecordActivityTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videopublish.TCVideoPublisherActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.tencent.rtmp.video.TXScreenCapture$TXScreenCaptureAssistantActivity"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videochoose.TCPicturePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PickerActivityTheme" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videochoose.TCTripleRecordVideoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PickerActivityTheme" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videochoose.TCVideoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PickerActivityTheme" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videojoiner.TCPictureJoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PictureTransitionActivityStyle" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videoeditor.TCVideoCutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditerActivityTheme" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videoeditor.TCVideoEditerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditerActivityTheme" />
+        <activity
+            android:name=".videoeditor.TCVideoEffectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/EditerActivityTheme" />
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.videojoiner.TCVideoJoinerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name="com.tencent.qcloud.xiaoshipin.userinfo.TCAboutActivity" />
+
+        <activity
+            android:name="com.zzti.fengyongge.imagepicker.PhotoSelectorActivity"
+            android:theme="@style/ConVTheme"></activity>
+        <activity android:name="com.zzti.fengyongge.imagepicker.PhotoPreviewActivity"></activity>
+
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ShouYeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AlphaTheme"/>
+
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ShouyeAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AlphaTheme"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.leichui.shortviedeo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="false" />
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.mainui.TCSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.tencent.qcloud.xiaoshipin.mainui.TCLanguagaSettingActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- leichui.shortvideo -->
+
+        <activity
+            android:name="com.leichui.shortviedeo.activity.AccountManageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ChangePhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ChangePwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.EnterpriseCertificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.RegistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.MyAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.MyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.PublishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.PublishVideoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.MyOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.MyFocusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.MyFansActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.FriendsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.YongHuXieYiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.YiJianFanKuiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.GoodsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ImageBrowseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.QueRenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.XuanDizhiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.AddAdressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.XuanZeDiQuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.EditAdressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ShouYinTaiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.MyPraiseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.MyDiscussActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.MyCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.InfoDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ShopSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.GoodsDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.ConversationActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ConVTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.leichui.shortviedeo"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <!-- leichui.shortvideo -->
+
+
+        <!-- baocao start-->
+        <activity
+            android:name="com.leichui.shortviedeo.activity.WangJiMiMaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.leichui.shortviedeo.activity.LaiFangDeRenActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- baocao end-->
+    </application>
+
+</manifest>

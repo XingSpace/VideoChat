@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/beautysettingkit/beautysettingkit.iml" filepath="$PROJECT_DIR$/beautysettingkit/beautysettingkit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rainbow-rabbit.iml" filepath="$PROJECT_DIR$/.idea/modules/rainbow-rabbit.iml" group="rainbow-rabbit" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rainbow-rabbit-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rainbow-rabbit-app.iml" group="rainbow-rabbit/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/beautysettingkit/rainbow-rabbit-beautysettingkit.iml" filepath="$PROJECT_DIR$/.idea/modules/beautysettingkit/rainbow-rabbit-beautysettingkit.iml" group="rainbow-rabbit/beautysettingkit" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ugckit/rainbow-rabbit-ugckit.iml" filepath="$PROJECT_DIR$/.idea/modules/ugckit/rainbow-rabbit-ugckit.iml" group="rainbow-rabbit/ugckit" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rainbow-rabbit2.iml" filepath="$PROJECT_DIR$/.idea/modules/rainbow-rabbit2.iml" group="rainbow-rabbit2" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/rainbow-rabbit2-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/rainbow-rabbit2-app.iml" group="rainbow-rabbit2/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/beautysettingkit/rainbow-rabbit2-beautysettingkit.iml" filepath="$PROJECT_DIR$/.idea/modules/beautysettingkit/rainbow-rabbit2-beautysettingkit.iml" group="rainbow-rabbit2/beautysettingkit" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ugckit/rainbow-rabbit2-ugckit.iml" filepath="$PROJECT_DIR$/.idea/modules/ugckit/rainbow-rabbit2-ugckit.iml" group="rainbow-rabbit2/ugckit" />
+      <module fileurl="file://$PROJECT_DIR$/ugckit/ugckit.iml" filepath="$PROJECT_DIR$/ugckit/ugckit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/unionsv.iml" filepath="$PROJECT_DIR$/unionsv.iml" />
+    </modules>
+  </component>
+</project>

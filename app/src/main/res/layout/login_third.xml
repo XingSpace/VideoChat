@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第三方登录"
+        android:textColor="#767578"
+        android:textSize="15sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp"/>
+    <LinearLayout
+        android:id="@+id/quickLoginL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="新浪"
+            android:textSize="13sp"
+            android:textColor="#95979C"
+            android:gravity="center"
+            android:drawableTop="@mipmap/weibo_ic"
+            android:drawablePadding="5dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="微信"
+            android:textSize="13sp"
+            android:textColor="#95979C"
+            android:gravity="center"
+            android:drawableTop="@mipmap/wechat_ic"
+            android:drawablePadding="5dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="QQ"
+            android:textSize="13sp"
+            android:textColor="#95979C"
+            android:gravity="center"
+            android:drawableTop="@mipmap/qq_ic"
+            android:drawablePadding="5dp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

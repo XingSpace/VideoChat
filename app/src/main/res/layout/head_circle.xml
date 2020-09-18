@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="245dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@mipmap/title_bg"
+        android:scaleType="centerCrop"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:id="@+id/myHead"
+        style="@style/imageView_corner2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="15dp"
+        app:actualImageScaleType="centerCrop"
+        />
+
+    <TextView
+        android:id="@+id/myName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="55dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/paizhaoRl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/xiangji_pic"/>
+    </RelativeLayout>
+
+</RelativeLayout>

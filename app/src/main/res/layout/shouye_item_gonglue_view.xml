@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/pic_img"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:text="测试文字123ABC测试文字123ABC测试文字123ABC测试文字123ABC测试文字123ABC"
+        android:textSize="12sp"
+        android:textColor="#ff666666"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/face"
+            android:id="@+id/icon_face"
+            android:scaleType="centerInside"
+            android:layout_width="16dp"
+            android:layout_height="16dp"/>
+
+        <TextView
+            android:id="@+id/sign_txt"
+            android:text="归来仍是少年"
+            android:textColor="#ff666666"
+            android:textSize="10sp"
+            android:maxLines="1"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/zan"
+            android:layout_width="12.5dp"
+            android:layout_height="12dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_praise" />
+
+        <TextView
+            android:id="@+id/zan_txt"
+            android:text="186"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

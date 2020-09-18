@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F6"
+    android:orientation="vertical">
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/dizhi_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        app:layout_empty="@layout/easy_recycle_view_empty"
+        app:layout_progress="@layout/easy_recycle_view_progress"
+        app:scrollbarStyle="insideOverlay" />
+
+    <TextView
+        android:id="@+id/add_dizhi"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textSize="17sp"
+        android:text="添加收货地址"
+        android:gravity="center"
+        android:textColor="#EA6102"
+        android:background="#FFFFFF"
+        />
+</LinearLayout>

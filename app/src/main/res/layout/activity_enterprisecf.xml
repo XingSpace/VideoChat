@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/grey_bg"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="企业名称"
+            android:textSize="16sp"
+            android:textColor="#030303"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="33dp">
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="请输入企业名称"
+                android:textSize="13sp"
+                android:paddingLeft="5dp"
+                android:gravity="center_vertical"
+                android:textColorHint="@color/hint_color"
+                android:textColor="@color/black"
+                android:background="@drawable/grey_biankuang"/>
+
+            <ImageView
+                android:id="@+id/del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/cancel_grey"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="right|center_vertical"
+                />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上传营业执照"
+            android:textSize="16sp"
+            android:layout_marginTop="25dp"
+            android:textColor="#030303"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="企业认证审核通过后开放我的店铺功能"
+            android:textSize="13sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/hint_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/photoL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"/>
+
+            <RelativeLayout
+                android:id="@+id/takePhotoRl"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@mipmap/takephoto_ic">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="拍照上传"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/commit_bt"
+        android:id="@+id/commit"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="确认提交"/>
+
+</LinearLayout>

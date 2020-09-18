@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/pic_space"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:orientation="horizontal">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/img_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/jishu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/jishu"
+            android:text="1/8"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:padding="15dp">
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="¥0.0"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/p_red"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/buyNow"
+            android:layout_width="75dp"
+            android:layout_height="28dp"
+            android:text="立即购买"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="@drawable/red_cornor_bg"/>
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="28dp"
+            android:text="我要采购"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:background="@drawable/yellow_cornor_bg"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:text="更多相似款"
+        android:textColor="@color/hint_color"
+        android:textSize="13sp"
+        android:background="@color/grey_bg"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"/>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/goods_recyclerView"
+        android:layout_width="match_parent"
+        android:background="@color/grey_bg"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:minHeight="200dp"
+        android:padding="11dp"
+        app:layout_empty="@layout/easy_recycle_view_empty"
+        app:layout_progress="@layout/easy_recycle_view_progress"
+        app:scrollbarStyle="insideOverlay" />
+</LinearLayout>

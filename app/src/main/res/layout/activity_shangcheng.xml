@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/shopHead"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            style="@style/imageView_circle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            app:actualImageScaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/textBlack"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/sousuo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="请输入关键字搜索"
+            android:textColorHint="@color/hint_color"
+            android:textSize="13sp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/textBlack"
+            android:drawablePadding="10dp"
+            android:background="@drawable/grey_xiao_yuanjiao"
+            android:drawableLeft="@mipmap/dianpusousuo"/>
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="取消"
+            android:paddingLeft="10dp"
+            android:textColor="@color/textBlack"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+    <com.jude.easyrecyclerview.EasyRecyclerView
+        android:id="@+id/shop_recyclerView"
+        android:layout_width="match_parent"
+        android:background="#EDEDED"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:minHeight="200dp"
+        android:padding="11dp"
+        app:layout_empty="@layout/easy_recycle_view_empty"
+        app:layout_progress="@layout/easy_recycle_view_progress"
+        app:scrollbarStyle="insideOverlay" />
+
+</LinearLayout>

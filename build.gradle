@@ -1,0 +1,55 @@
+buildscript {
+    ext.kotlin_version = '1.4.0-rc'
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        jcenter()
+        google()
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
+        maven { url "http://maven.oa.com/nexus/content/groups/androidbuild" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        flatDir {
+            dirs 'src/main/jniLibs'
+            dirs project(':app').file('libs')
+        }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        maven { url "http://maven.oa.com/nexus/content/groups/androidbuild" }
+        maven {url  "https://dl.bintray.com/rongcloud/maven"}
+        jcenter()
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 26
+    buildToolsVersion = "28.0.3"
+    supportSdkVersion = "25.4.0"
+    minSdkVersion = 19
+    targetSdkVersion = 26
+    versionCode = 1
+    versionName = "v1.0"
+    proguard = true
+    rootPrj = "$projectDir/.."
+    ndkAbi = 'armeabi-v7a'
+    noffmpeg = false
+    noijkplay = false
+    aekit_version = '1.0.19-cloud'
+    liteavSdk="com.tencent.liteav:LiteAVSDK_Professional:latest.release"
+}

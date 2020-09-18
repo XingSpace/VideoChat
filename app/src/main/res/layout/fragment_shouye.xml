@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.leichui.shortviedeo.view.RecyclerScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/multiImage"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <com.leichui.shortviedeo.view.RecyclerViewShouyeItem
+            android:id="@+id/remenchangsuo"
+            app:title="热门场所"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <com.leichui.shortviedeo.view.SliderViewShouyeItem
+            android:id="@+id/tuijianhuodong"
+            app:title="推荐活动"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <com.leichui.shortviedeo.view.RecyclerViewShouyeItem
+            android:id="@+id/huobaogonglue"
+            app:title="火爆攻略"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <ImageView
+            android:id="@+id/guanggao"
+            android:background="@drawable/bg"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+        <com.leichui.shortviedeo.view.RecyclerViewShouyeItem
+            android:id="@+id/yuelao"
+            app:title="月老"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"/>
+
+        <com.leichui.shortviedeo.view.RecyclerViewShouyeItem
+            android:id="@+id/mote"
+            app:title="模特"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+
+</com.leichui.shortviedeo.view.RecyclerScrollView>
